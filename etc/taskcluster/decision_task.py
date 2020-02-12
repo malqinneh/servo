@@ -638,7 +638,7 @@ def linux_release_build_with_debug_assertions(layout_2020):
         .with_script("""
             time ./mach rustc -V
             time ./mach fetch
-            ./mach build --release --with-debug-assertions %s -p servo
+            ./mach build --dev --with-debug-assertions %s -p servo
             ./etc/ci/lockfile_changed.sh
             tar -czf /target.tar.gz \
                 target/release/servo \
